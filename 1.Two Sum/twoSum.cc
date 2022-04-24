@@ -1,14 +1,7 @@
-=Problem=
-https://leetcode.com/problems/two-sum
-
-=Analysis=
-
-=Answer=
-
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target);
-    
+
 };
 vector<int> Solution::twoSum(vector<int>& nums, int target)
 {
@@ -18,10 +11,10 @@ vector<int> Solution::twoSum(vector<int>& nums, int target)
     {
         int b = target - nums[i];
         map<int, int>::iterator it = v2i.find(b);
-        
+
         if (it != v2i.end())
         {
-           
+
             v[0] = (it->second);
             v[1] = i;
             break;
@@ -30,7 +23,8 @@ vector<int> Solution::twoSum(vector<int>& nums, int target)
         {
             v2i[nums[i]] = i;
         }
-        
+
     }
     return v;
 }
+
