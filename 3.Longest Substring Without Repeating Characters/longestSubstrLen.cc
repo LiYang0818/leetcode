@@ -1,17 +1,11 @@
-
+/*
 For problem, refer to the link below
   https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
 Analysis:
   Assume the char in the string S is only ASCII character， so we can have an array ch2Idx[128] to save the position of the every character in the string
   init values of the array ch2Idx[] are 0,  
-  define integer dupPos to save the position that the duplicated char first time appears
-  then traverse the string from first to last character,  ch2Idx['x'] = position of X in the string
-  for a given char x in position i   
-    if ch2Idx[s[i]] is not 0, then we found a substring without repeating any character in the substring 
-    save the pos where the first char of found duplicated char to dupPos if the pos is bigger than the original dupPos
-    save the length of the substring
-    update the ch2Idx
+*/
 
 class Solution {
 public:
